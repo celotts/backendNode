@@ -15,11 +15,14 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     controller.addMessagge(req.body.user, req.body.message)
-    if (req.query.error === 'ok') {
-        response.error(req, res, 'Error inesperado', 500, 'Es solo una simulacion de los errores');
-    } else {
-        response.success(req, res, 'Creado correctamente', 201);
-    }
+        .then((fullMessage) => {
+            response.success(req, res, fullMessage, 201)
+        })
+        .catch(e => {
+            response.error(req, res, 'Información invalida', 400, 'Error en el controlador');
+
+        })
+
 })
 
 module.exports = router;
