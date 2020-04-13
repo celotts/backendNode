@@ -1,0 +1,29 @@
+{
+  "name": "backendnode",
+  "version": "0.1.0",
+  "description": "Un chat como telegram",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celotts/backendNode.git"
+  },
+  "keywords": [
+    "chat",
+    "telegram",
+    "server"
+  ],
+  "author": "Carlos Lott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/celotts/backendNode/issues"
+  },
+  "homepage": "https://github.com/celotts/backendNode#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
