@@ -1,7 +1,6 @@
 const express = require('express');
 const multer = require('multer');
 const response = require('../../network/response');
-
 const controller = require('./controller');
 
 const router = express.Router();
@@ -38,7 +37,6 @@ router.patch('/:id', (req, res) => {
         .catch(e => {
             response.error(req, res, 'Error interno', 500, e)
         });
-
 })
 
 router.delete('/:id', (req, res) => {
@@ -50,4 +48,5 @@ router.delete('/:id', (req, res) => {
             response.error(req, res, 'Error Interno', 500, e)
         })
 })
+
 module.exports = router;
