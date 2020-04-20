@@ -40,9 +40,7 @@ let updateMessage = (id, message) => {
         }
 
         const result = await store.updateText(id, message);
-
         resolve(result);
-
     })
 }
 
